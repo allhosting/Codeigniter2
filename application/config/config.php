@@ -23,6 +23,13 @@
 |
 */
 $config['base_url'] = '';
+switch($_SERVER["SERVER_NAME"]) {
+	case "yourdomain.com": 
+		$config['base_url'] = 'http://yourdomain.com/';
+		break;
+	default:
+		$config['base_url'] = 'http://localhost/';
+}
 
 /*
 |--------------------------------------------------------------------------
